@@ -5,13 +5,17 @@
 </script>
 
 {#if browser}
-	<div class="relative h-full w-full" style="min-height: 400px;">
+	<div
+		class="relative h-full w-full"
+		style="min-height: 400px; background: linear-gradient(135deg, hsl(210 40% 92%), hsl(220 50% 96%));"
+	>
 		<Canvas>
 			<RotatingCube />
 		</Canvas>
 
 		<div class="pointer-events-none absolute left-1/2 top-8 -translate-x-1/2 text-center">
-			<p class="text-sm text-slate-400">Drag to rotate • Scroll to zoom</p>
+			<h1 class="mb-2 text-4xl font-bold text-gray-800">Glass Cube with Octopus</h1>
+			<p class="text-gray-600">Drag to rotate • Scroll to zoom</p>
 		</div>
 	</div>
 {:else}
