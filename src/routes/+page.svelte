@@ -1,36 +1,29 @@
 <script lang="ts">
-	import RotatingCubeCanvas from '$lib/components/RotatingCubeCanvas.svelte';
-
+	import ConfettiBackground from '$lib/components/ConfettiBackground.svelte';
 	let mobileMenuOpen = false;
 </script>
 
 <div class="min-h-screen bg-gradient-to-b from-slate-50 to-white">
 	<!-- Navigation -->
-	<nav class="fixed z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md">
+	<nav class="fixed z-50 w-full border-b border-slate-700 bg-slate-900/90 backdrop-blur-md">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 			<div class="flex h-16 items-center justify-between">
-				<div class="flex-shrink-0 text-xl font-bold text-slate-900">YourBrand</div>
+				<div class="flex-shrink-0 text-xl font-bold text-white">YourBrand</div>
 
 				<!-- Desktop Navigation -->
 				<div class="hidden space-x-8 md:flex">
-					<a href="#features" class="text-slate-600 transition-colors hover:text-slate-900"
-						>Features</a
-					>
-					<a href="#about" class="text-slate-600 transition-colors hover:text-slate-900">About</a>
-					<a href="#pricing" class="text-slate-600 transition-colors hover:text-slate-900"
-						>Pricing</a
-					>
-					<a href="#contact" class="text-slate-600 transition-colors hover:text-slate-900"
-						>Contact</a
-					>
+					<a href="#features" class="text-slate-300 transition-colors hover:text-white">Features</a>
+					<a href="#about" class="text-slate-300 transition-colors hover:text-white">About</a>
+					<a href="#pricing" class="text-slate-300 transition-colors hover:text-white">Pricing</a>
+					<a href="#contact" class="text-slate-300 transition-colors hover:text-white">Contact</a>
 				</div>
 
 				<div class="hidden space-x-4 md:flex">
-					<button class="px-4 py-2 text-slate-600 transition-colors hover:text-slate-900">
+					<button class="px-4 py-2 text-slate-300 transition-colors hover:text-white">
 						Sign In
 					</button>
 					<button
-						class="rounded-lg bg-slate-900 px-4 py-2 text-white transition-colors hover:bg-slate-800"
+						class="rounded-lg bg-white px-4 py-2 text-slate-900 transition-colors hover:bg-slate-100"
 					>
 						Get Started
 					</button>
@@ -38,7 +31,7 @@
 
 				<!-- Mobile menu button -->
 				<button
-					class="p-2 md:hidden"
+					class="p-2 text-white md:hidden"
 					on:click={() => (mobileMenuOpen = !mobileMenuOpen)}
 					aria-label="Toggle menu"
 				>
@@ -56,17 +49,17 @@
 
 		<!-- Mobile Menu -->
 		{#if mobileMenuOpen}
-			<div class="border-t border-slate-200 bg-white md:hidden">
+			<div class="border-t border-slate-700 bg-slate-900 md:hidden">
 				<div class="space-y-3 px-4 py-3">
-					<a href="#features" class="block text-slate-600 hover:text-slate-900">Features</a>
-					<a href="#about" class="block text-slate-600 hover:text-slate-900">About</a>
-					<a href="#pricing" class="block text-slate-600 hover:text-slate-900">Pricing</a>
-					<a href="#contact" class="block text-slate-600 hover:text-slate-900">Contact</a>
+					<a href="#features" class="block text-slate-300 hover:text-white">Features</a>
+					<a href="#about" class="block text-slate-300 hover:text-white">About</a>
+					<a href="#pricing" class="block text-slate-300 hover:text-white">Pricing</a>
+					<a href="#contact" class="block text-slate-300 hover:text-white">Contact</a>
 					<div class="space-y-2 pt-3">
-						<button class="w-full rounded-lg border border-slate-300 px-4 py-2 text-slate-600">
+						<button class="w-full rounded-lg border border-slate-600 px-4 py-2 text-slate-300">
 							Sign In
 						</button>
-						<button class="w-full rounded-lg bg-slate-900 px-4 py-2 text-white">
+						<button class="w-full rounded-lg bg-white px-4 py-2 text-slate-900">
 							Get Started
 						</button>
 					</div>
@@ -76,19 +69,20 @@
 	</nav>
 
 	<!-- Hero Section -->
-	<section class="px-4 pb-20 pt-32 sm:px-6 lg:px-8">
-		<div class="mx-auto max-w-7xl">
+	<section class="pb-50 relative px-4 pt-32 sm:px-6 lg:px-8">
+		<ConfettiBackground dash={0.9} count={100} radius={50} />
+		<div class="relative z-10 mx-auto max-w-7xl">
 			<div class="grid items-center gap-12 lg:grid-cols-2">
 				<div class="text-center lg:text-left">
-					<h1 class="mb-6 text-5xl font-bold text-slate-900 md:text-6xl lg:text-7xl">
-						Build Something
+					<h1 class="mb-6 text-5xl font-bold text-white md:text-6xl lg:text-7xl">
+						This is
 						<span
 							class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent"
 						>
-							Amazing
+							Spagetti Code
 						</span>
 					</h1>
-					<p class="mx-auto mb-10 max-w-3xl text-xl text-slate-600 md:text-2xl lg:mx-0">
+					<p class="mx-auto mb-10 max-w-3xl text-xl text-white md:text-2xl lg:mx-0">
 						Create beautiful, fast, and modern web applications with ease. Start your journey today
 						and bring your ideas to life.
 					</p>
@@ -99,17 +93,11 @@
 							Get Started Free
 						</button>
 						<button
-							class="rounded-lg border-2 border-slate-900 px-8 py-4 text-lg font-semibold text-slate-900 transition-colors hover:bg-slate-50"
+							class="rounded-lg border-2 border-white px-8 py-4 text-lg font-semibold text-white transition-colors hover:bg-slate-900"
 						>
 							View Demo
 						</button>
 					</div>
-				</div>
-
-				<div
-					class="h-[500px] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900 to-slate-800"
-				>
-					<RotatingCubeCanvas />
 				</div>
 			</div>
 		</div>
