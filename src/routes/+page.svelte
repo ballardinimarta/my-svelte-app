@@ -1,5 +1,6 @@
 <script lang="ts">
 	import ConfettiBackground from '$lib/components/ConfettiBackground.svelte';
+	import BoxesBackground from '$lib/components/BoxesBackground.svelte';
 	let mobileMenuOpen = false;
 </script>
 
@@ -104,11 +105,14 @@
 	</section>
 
 	<!-- Features Section -->
-	<section id="features" class="bg-white px-4 py-20 sm:px-6 lg:px-8">
-		<div class="mx-auto max-w-7xl">
+	<section id="features" class="relative bg-white px-4 py-20 sm:px-6 lg:px-8">
+		<BoxesBackground />
+		<div class="relative z-10 mx-auto max-w-7xl">
 			<h2 class="mb-16 text-center text-4xl font-bold text-slate-900">Why Choose Us</h2>
 			<div class="grid gap-8 md:grid-cols-3">
-				<div class="rounded-xl border border-slate-200 p-6 transition-shadow hover:shadow-lg">
+				<div
+					class="rounded-xl border border-slate-200 bg-white/80 p-6 backdrop-blur-sm transition-shadow hover:shadow-lg"
+				>
 					<div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100">
 						<svg
 							class="h-6 w-6 text-blue-600"
@@ -128,7 +132,9 @@
 					<p class="text-slate-600">Optimized performance for the best user experience.</p>
 				</div>
 
-				<div class="rounded-xl border border-slate-200 p-6 transition-shadow hover:shadow-lg">
+				<div
+					class="rounded-xl border border-slate-200 bg-white/80 p-6 backdrop-blur-sm transition-shadow hover:shadow-lg"
+				>
 					<div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100">
 						<svg
 							class="h-6 w-6 text-purple-600"
@@ -148,7 +154,9 @@
 					<p class="text-slate-600">Built with security best practices from the ground up.</p>
 				</div>
 
-				<div class="rounded-xl border border-slate-200 p-6 transition-shadow hover:shadow-lg">
+				<div
+					class="rounded-xl border border-slate-200 bg-white/80 p-6 backdrop-blur-sm transition-shadow hover:shadow-lg"
+				>
 					<div class="mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-green-100">
 						<svg
 							class="h-6 w-6 text-green-600"
